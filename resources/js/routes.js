@@ -1,17 +1,22 @@
-import Home from './components/Home'
-import About from './components/About'
+import Profile from "./components/Profile";
+import Role from "./components/Role";
+import User from "./components/User";
 
 export default {
     mode: 'history',
 
     routes: [
         {
-            path: '/',
-            component: Home
+            path: '/profile',
+            component: Profile
         },
         {
-            path: '/about',
-            component: About
+            path: '/user',
+            component: User
+        },
+        {
+            path: '/role',
+            component: Role
         }
     ]
 }
