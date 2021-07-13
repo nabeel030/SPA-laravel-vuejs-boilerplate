@@ -4,7 +4,7 @@
             <div class="card-header">Profile</div>
 
             <div class="card-body">
-                Profile Component
+                Profile Component <span class="badge badge-warning">{{test}}</span>
             </div>
         </div>
     </div>
@@ -12,7 +12,17 @@
 
 <script>
     export default {
-        name: "Profile"
+        name: "Profile",
+
+        mounted() {
+            this.$store.commit('setTest','Vuex State Updated!')
+        },
+
+        computed: {
+            test() {
+                return this.$store.getters.test
+            },
+        }
     }
 </script>
 

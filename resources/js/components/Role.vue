@@ -4,7 +4,7 @@
             <div class="card-header">Role Management</div>
 
             <div class="card-body">
-                Role Component
+                Role Component <span class="badge badge-warning">{{test}}</span>
             </div>
         </div>
     </div>
@@ -12,8 +12,15 @@
 
 <script>
     export default {
-        name: "Role"
+        name: "Role",
+
+        computed: {
+            test() {
+                return this.$store.getters.test
+            },
+        }
     }
+
 </script>
 
 <style scoped>
